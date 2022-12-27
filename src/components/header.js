@@ -10,15 +10,15 @@ const Header = ({ siteTitle }) => (
     <Container className="flex justify-between align-middle">
       <>
         <div>
-          <Link className="text-xl bg-slate-300 rounded-full px-5" to="/">{siteTitle}</Link>
-          <Link className="ml-5 bg-slate-300 rounded-full px-5" to="/projects">Projects</Link>
-          <Link className="ml-5 bg-slate-300 rounded-full px-5" to="/blogs">Blog</Link>
+          <Link className="text-xl bg-slate-300 rounded-full px-5 drop-shadow-lg" to="/">{siteTitle}</Link>
+          <Link className="ml-5 bg-slate-300 rounded-full px-5 drop-shadow-lg" to="/projects">Projects</Link>
+          <Link className="ml-5 bg-slate-300 rounded-full px-5 drop-shadow-lg" to="/blogs">Blog</Link>
         </div>
         <div className="align-middle hidden md:flex">
-          <Link className="ml-5 bg-slate-300 rounded-full px-5 flex items-center" to="https://twitter.com/maxprettyjohns">
+          <Link className="ml-5 bg-slate-300 rounded-full px-5 flex items-center drop-shadow-lg" to="https://twitter.com/maxprettyjohns">
             <FontAwesomeIcon icon={faTwitter} />
           </Link>
-          <Link className="ml-5 bg-slate-300 rounded-full px-5 flex items-center" to="https://github.com/quorauk">
+          <Link className="ml-5 bg-slate-300 rounded-full px-5 flex items-center drop-shadow-lg" to="https://github.com/quorauk">
             <FontAwesomeIcon icon={faGithub} />
           </Link>
         </div>
