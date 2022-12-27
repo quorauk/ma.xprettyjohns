@@ -3,118 +3,63 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import Container from "../components/container"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+import PlanetVideo from "../assets/3dvideo.webm"
+import OSXRuby from "../assets/osxruby.webm"
+import TileVideo from "../assets/tilevideo.webm"
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+    <Container>
+      <div className="grid md:grid-cols-2">
+        <video autoPlay={true} loop={true} muted={true} playsInline={true}>
+          <source src={PlanetVideo} />
+        </video>
+        <div className=" flex justify-center items-center p-5">
+          <h1 className="text-8xl text-center font-titles font-black">
+            {"Hi, I'm Max 👋"}
+          </h1>
+        </div>
+      </div>
+    </Container>
+    <div className="w-full bg-slate-300 drop-shadow-md">
+      <Container className="p-8 grid md:grid-cols-2">
+        <div className="flex align-center order-1 md:order-2">
+          <video autoPlay={true} loop={true} muted={true} playsInline={true}>
+            <source src={OSXRuby} />
+          </video>
+        </div>
+        <div className="p-8 text-2xl order-2 md:order-1">
+          <p>
+            {"I'm a software developer based in Bristol working for Good Sixty."}
+          </p>
+          <br/>
+          <p>
+            {"I'm primarily working with Rails professionally but have experience with Elixir (Phoenix), Vue and React. I'm currently learning Rust via personal projects."}
+          </p>
+          <br/>
+          <p>
+            {"I'm also confident working with DevOps tools such as Kubernetes and Terraform, having built and managed platforms on AWS using both."}
+          </p>
+        </div>
+      </Container>
     </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    <Container className="p-8 grid md:grid-cols-2">
+      <div className="flex align-center">
+        <video autoPlay={true} loop={true} muted={true} playsInline={true}>
+          <source src={TileVideo} />
+        </video>
+      </div>
+      <div className="p-8 text-2xl">
+        <p>{"In my personal life I'm a music fan and love live music, I'm currently attempting to listen to one album a day every day."}</p>
+        <br/>
+        <p>{"I also enjoy video games, I'm a big fan of the Yakuza series and I'm currently learning Riichi Mahjong."}</p>
+      </div>
+    </Container>
   </Layout>
 )
 
