@@ -14,6 +14,15 @@ module.exports = {
     author: `@quorauk`,
     siteUrl: `https://ma.xprettyjohns.com`,
   },
+  developMiddleware: app => {
+    app.use((req, res, next) => {
+      res.set('Access-Control-Allow-Origin', '*');
+      res.set('Cross-Origin-Opener-Policy', 'cross-origin');
+      res.set('Cross-Origin-Embedder-Policy', 'require-corp');
+
+      next();
+    });
+  },
   plugins: [
     `gatsby-plugin-image`,
     {

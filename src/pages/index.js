@@ -1,16 +1,11 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Container from "../components/container"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
-import PlanetVideo from "../assets/3dvideo.webm"
-import OSXRuby from "../assets/osxruby.webm"
-import TileVideo from "../assets/tilevideo.webm"
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import PlanetVideo from "../assets/blob.mp4"
+import OSXRuby from "../assets/ruby.mp4"
+import TileVideo from "../assets/tile.mp4"
 
 const IndexPage = () => (
   <Layout>
