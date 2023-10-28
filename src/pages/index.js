@@ -11,7 +11,7 @@ const IndexPage = () => (
   <Layout>
     <Container>
       <div className="grid md:grid-cols-2">
-        <video autoPlay={true} loop={true} muted={true} playsInline={true}>
+        <video autoPlay={true} loop={true} muted={true} playsInline={true} className="xl:min-h-[576px] md:min-h-[384px]">
           <source src={PlanetVideo} />
         </video>
         <div className=" flex justify-center items-center p-5">
@@ -24,13 +24,13 @@ const IndexPage = () => (
     <div className="w-full bg-slate-300 drop-shadow-md">
       <Container className="p-8 grid md:grid-cols-2">
         <div className="flex align-center order-1 md:order-2">
-          <video autoPlay={true} loop={true} muted={true} playsInline={true}>
+          <video autoPlay={true} loop={true} muted={true} playsInline={true} className="xl:min-h-[576px] md:min-h-[384px]">
             <source src={OSXRuby} />
           </video>
         </div>
         <div className="p-8 text-2xl order-2 md:order-1">
           <p>
-            {"I'm a software developer based in Bristol working for Good Sixty."}
+            {"I'm a Software Developer based in Bristol available for freelance!."}
           </p>
           <br/>
           <p>
@@ -45,7 +45,7 @@ const IndexPage = () => (
     </div>
     <Container className="p-8 grid md:grid-cols-2">
       <div className="flex align-center">
-        <video autoPlay={true} loop={true} muted={true} playsInline={true}>
+        <video autoPlay={true} loop={true} muted={true} playsInline={true} className="xl:min-h-[576px] md:min-h-[384px]">
           <source src={TileVideo} />
         </video>
       </div>

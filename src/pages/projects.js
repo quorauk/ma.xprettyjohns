@@ -7,6 +7,8 @@ import Container from "../components/container"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 import SMBF from "../images/smbf.png"
+import CamdenMarketOnline from "../images/camden-market-online.png"
+import GoodSixty from "../images/goodsixty.png"
 import Stream from "../images/stream_fgc.png"
 import VMU from "../images/VMU.png"
 
@@ -20,6 +22,42 @@ const ProjectsPage = () => (
         {"Here are some projects I've been working on"}
       </p>
     </Container>
+    <div className="w-full pb-8">
+      <Container className='my-8 px-8 grid md:grid-cols-2'>
+        <div className="flex align-middle">
+          <img src={CamdenMarketOnline} className="object-contain" />
+        </div>
+        <div className='py-5 md:px-8'>
+          <h2 className="text-3xl">Camden Market Online - GoodSixty</h2>
+          <br />
+          <p>Link: <a href="http://goodsixty.co.uk/camden-market">Camden Market Online</a></p>
+          <p>Technology: Ruby on Rails</p>
+          <br />
+          <p className="text-2xl">The online platform for Camden Market Online.</p>
+          <br />
+          <p className="text-2xl">Developed over a short period during winter of 2022, included huge improvements to the shopping flow of the original platform that were eventually rolled in.</p>
+        </div>
+      </Container>
+    </div>
+    <div className="w-full bg-slate-300 drop-shadow-md py-8">
+      <Container className='my-8 px-8 grid md:grid-cols-2'>
+        <div className="flex align-middle order-1 md:order-2">
+          <img src={GoodSixty} className="object-contain" />
+        </div>
+        <div className='py-5 md:px-8 order-2 md:order-1'>
+          <h2 className="text-3xl">GoodSixty</h2>
+          <br />
+          <p>Link: <a href="http://goodsixty.co.uk">GoodSixty</a></p>
+          <p>Technology: Ruby on Rails, DatoCMS, Stripe</p>
+          <br />
+          <p className="text-2xl">Online platform for independent shopping.</p>
+          <br />
+          <p className="text-2xl">Allowed customers to order independent groceries from multiple traders, items could be delivered by bike courier, national delivery and collection.</p>
+          <br />
+          <p className="text-2xl">Added Subscriptions, Bundles and multiple new markets. Implemented CMS, improved search and shopping functionality and many more!</p>
+        </div>
+      </Container>
+    </div>
     <div className="w-full pb-8">
       <Container className='my-8 px-8 grid md:grid-cols-2'>
         <div className="flex align-middle">
